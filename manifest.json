@@ -1,0 +1,23 @@
+{
+  "name": "Play TV, Movies on Stremio from IMDb",
+  "description": "Add Play buttons to IMDb site. Prerequisite: Stremio App/Web.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "hello_extensions.png"
+  },
+  "content_scripts": [
+    {
+      "css":[
+
+      ],
+      "js":[
+        "/js/jquery/jquery-3.7.1.slim.min.js",
+        "/js/main.js"
+      ],
+      "matches": ["*://www.imdb.com/title/*"],
+      "run_at": "document_end"
+    }
+  ]
+}
